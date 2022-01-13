@@ -40,9 +40,6 @@ if(images) {
     image.onload = function() {
       imgHigh = image.height
       imgWide = image.width
-      if (imgHigh < 300 || imgWide < 300) {
-        resizeImage(image)
-      }
       if (imgHigh < imgWide) {
         image.setAttribute("style", "height: 17.5vw")
       } else {
