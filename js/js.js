@@ -33,6 +33,7 @@ if(images) {
 
         let nextBut = document.createElement("a");
         imageWindow.appendChild(nextBut)
+        nextBut.setAttribute("class", "next-btn")
         nextBut.setAttribute("onclick", "changeImg(this)")
       }
     }
