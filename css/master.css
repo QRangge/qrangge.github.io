@@ -1,0 +1,63 @@
+.obrasosky{
+  margin: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.container{
+  width: 23vw;
+  height: 17vw;
+  margin: 8px;
+  border: 2px solid #C0392B;
+  border-radius: 0.3vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1px #C0392B;
+  background-color: #333333;
+}
+
+.obrasosky img{
+  overflow: hidden;
+  filter: sepia();
+  transition: 1s;
+}
+
+.obrasosky img:hover{
+  overflow: hidden;
+  filter: none;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.img-popup{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000DD;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.img-popup img{
+  margin-top: 10vh;
+  max-width: 80vw;
+  max-height: 80vh;
+  z-index: 10001;
+}
+
+.label {
+  font-weight: bold;
+  color: #EEEEEE;
+  font-size: 3vw;
+  position: absolute;
+  z-index: 10003
+}
