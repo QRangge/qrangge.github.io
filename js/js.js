@@ -7,6 +7,8 @@ var resetter = 0;
 if(images) {
   images.forEach(function(image) {
     let imgName = image.alt;
+    let imgHigh = image.height;
+    let imgWide = image.width;
     image.setAttribute("id", counter);
 
     if (imgHigh < imgWide) {
@@ -46,8 +48,6 @@ if(images) {
       }
     }
     image.onload = function() {
-      imgHigh = image.height;
-      imgWide = image.width;
       if (imgHigh < imgWide) {
         image.setAttribute("style", "height: 17.5vw");
       } else {

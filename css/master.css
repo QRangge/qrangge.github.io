@@ -22,7 +22,7 @@
 
 .obrasosky img{
   overflow: hidden;
-  filter: sepia();
+  filter: sepia(1);
   transition: 1s;
 }
 
