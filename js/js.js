@@ -57,3 +57,5 @@ function closePopup() {
 function changeImg(cmmd) {
   alert(cmmd)
 }
+
+window.location.reload();
