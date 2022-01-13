@@ -2,6 +2,7 @@ let images = document.querySelectorAll(".container img");
 let windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 var counter = 0;
+var resetter = 0;
 
 if(images) {
   images.forEach(function(image) {
@@ -40,6 +41,7 @@ if(images) {
     image.onload = function() {
       imgHigh = image.height;
       imgWide = image.width;
+      image.setAttribute("style", "height:17.5vw; width: 23.5vw;");
       if (imgHigh < imgWide) {
         image.setAttribute("style", "height: 17.5vw");
       } else {
