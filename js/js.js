@@ -8,6 +8,13 @@ if(images) {
   images.forEach(function(image) {
     let imgName = image.alt;
     image.setAttribute("id", counter);
+
+    if (imgHigh < imgWide) {
+      image.setAttribute("style", "height: 17.5vw");
+    } else {
+      image.setAttribute("style", "width: 23.5vw");
+    }
+
     image.onclick = function() {
       let imgUrl = image.src;
       let imgId = image.id;
@@ -41,7 +48,6 @@ if(images) {
     image.onload = function() {
       imgHigh = image.height;
       imgWide = image.width;
-      image.setAttribute("style", "height:17.5vw; width: 23.5vw;");
       if (imgHigh < imgWide) {
         image.setAttribute("style", "height: 17.5vw");
       } else {
