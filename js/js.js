@@ -1,12 +1,12 @@
-let images = document.querySelectorAll(".container img")
+let images = document.querySelectorAll(".container img");
 let windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
-var counter = 0
+var counter = 0;
 
 if(images) {
   images.forEach(function(image) {
     let imgName = image.alt;
-    image.setAttribute("id", counter)
+    image.setAttribute("id", counter);
     image.onclick = function() {
       let imgUrl = image.src;
       let imgId = image.id;
@@ -26,27 +26,27 @@ if(images) {
 
       imagePopup.onload = function() {
         let imageLabel = document.createElement("p");
-        imageLabel.setAttribute("class", "label")
+        imageLabel.setAttribute("class", "label");
         imageLabel.innerHTML = imgName;
         imageWindow.appendChild(imageLabel);
-        imageLabel.setAttribute("style", "top: " + (((windowHeight - imagePopup.height) / 4) - 10) + "px; margin-top: 1vh;" )
+        imageLabel.setAttribute("style", "top: " + (((windowHeight - imagePopup.height) / 4) - 10) + "px; margin-top: 1vh;" );
 
         let nextBut = document.createElement("a");
-        imageWindow.appendChild(nextBut)
-        nextBut.setAttribute("class", "next-btn")
-        nextBut.setAttribute("onclick", "changeImg(this)")
+        imageWindow.appendChild(nextBut);
+        nextBut.setAttribute("class", "next-btn");
+        nextBut.setAttribute("onclick", "changeImg(this)");
       }
     }
     image.onload = function() {
-      imgHigh = image.height
-      imgWide = image.width
+      imgHigh = image.height;
+      imgWide = image.width;
       if (imgHigh < imgWide) {
-        image.setAttribute("style", "height: 17.5vw")
+        image.setAttribute("style", "height: 17.5vw");
       } else {
-        image.setAttribute("style", "width: 23.5vw")
+        image.setAttribute("style", "width: 23.5vw");
       }
     }
-    counter += 1
+    counter += 1;
   });
 }
 
@@ -55,7 +55,5 @@ function closePopup() {
 }
 
 function changeImg(cmmd) {
-  alert(cmmd)
+  alert(cmmd);
 }
-
-window.location.reload();
